@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elder Home Services — Compassionate Care at Home</title>
+<meta name="description" content="Elder Home Services provides compassionate in-home care for seniors: personal care, companionship, housekeeping, transportation, and respite care.">
+<style>
+:root{
+  --teal:#0f766e; --teal-dark:#115e59; --cream:#fdfaf5; --sand:#f3ede3;
+  --ink:#1f2937; --muted:#5b6472; --gold:#c8a45a; --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:18px}
+h1,h2,h3{font-family:'Trebuchet MS',Verdana,sans-serif;line-height:1.25}
+a{color:var(--teal)}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:var(--cream);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:wrap;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Trebuchet MS',sans-serif;font-weight:700;font-size:1.35rem;color:var(--teal-dark);text-decoration:none}
+.logo .mark{width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+nav ul{list-style:none;display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+nav a{text-decoration:none;color:var(--ink);font-family:'Trebuchet MS',sans-serif;font-size:1rem}
+nav a:hover{color:var(--teal)}
+.btn{display:inline-block;background:var(--teal);color:#fff !important;padding:12px 26px;border-radius:999px;font-family:'Trebuchet MS',sans-serif;text-decoration:none;border:none;cursor:pointer;font-size:1rem;transition:background .2s}
+.btn:hover{background:var(--teal-dark)}
+.btn.gold{background:var(--gold);color:#3d2f0e !important}
+.btn.gold:hover{background:#b8934a}
+.hero{background:linear-gradient(160deg,var(--teal-dark),var(--teal));color:#fff;padding:90px 0}
+.hero .container{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:2.9rem;margin-bottom:18px}
+.hero h1 em{color:#fde68a;font-style:normal}
+.hero p{font-size:1.2rem;color:#e6f4f2;margin-bottom:28px}
+.hero-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:30px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.hero-card h3{color:var(--teal-dark);margin-bottom:10px}
+.hero-card ul{list-style:none;margin:12px 0 18px}
+.hero-card li{padding-left:28px;position:relative;margin:8px 0}
+.hero-card li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+section{padding:80px 0}
+.sec-intro{text-align:center;max-width:720px;margin:0 auto 48px}
+.sec-intro .kicker{font-family:'Trebuchet MS',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);font-size:.85rem;font-weight:700}
+.sec-intro h2{font-size:2.2rem;color:var(--teal-dark);margin:8px 0 14px}
+.sec-intro p{color:var(--muted)}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-grid .art{background:var(--sand);border-radius:var(--radius);min-height:320px;display:flex;align-items:center;justify-content:center;font-size:5rem}
+.about ul{list-style:none;margin-top:18px}
+.about li{padding-left:30px;position:relative;margin:10px 0}
+.about li::before{content:"♥";position:absolute;left:0;color:var(--gold)}
+.services{background:var(--sand)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:0 4px 14px rgba(0,0,0,.06);border-top:4px solid var(--gold)}
+.card .icon{font-size:2.2rem}
+.card h3{color:var(--teal-dark);margin:12px 0 8px;font-size:1.25rem}
+.card p{color:var(--muted);font-size:1rem}
+.quotes{background:var(--cream)}
+blockquote{background:#fff;border-radius:var(--radius);padding:26px 30px;box-shadow:0 4px 14px rgba(0,0,0,.06);font-style:italic;color:var(--ink)}
+blockquote .who{display:block;margin-top:14px;font-style:normal;font-family:'Trebuchet MS',sans-serif;color:var(--teal-dark);font-weight:700;font-size:.95rem}
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact label{display:block;font-family:'Trebuchet MS',sans-serif;margin:16px 0 6px;font-weight:700;color:var(--teal-dark)}
+.contact input,.contact textarea{width:100%;padding:12px;border:1px solid #cbd5d3;border-radius:8px;font-size:1rem;font-family:inherit;background:#fbfdfc}
+.contact input:focus,.contact textarea:focus{outline:2px solid var(--teal)}
+.form-note{font-size:.9rem;color:var(--muted);margin-top:8px}
+.contact-details p{margin:14px 0;font-size:1.05rem}
+.contact-details .big{font-size:1.5rem;font-weight:700;color:var(--teal-dark);font-family:'Trebuchet MS',sans-serif}
+footer{background:var(--teal-dark);color:#d3e6e3;padding:36px 0;text-align:center}
+@media (max-width:860px){
+  .hero .container,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#top"><span class="mark">♥</span> Elder Home Services</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Request a Call</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <div>
+      <h1>Caring for your family, <em>like our own</em>.</h1>
+      <p>Elder Home Services provides warm, dependable in-home care for seniors — helping them live safely and comfortably in the homes they love.</p>
+      <a class="btn gold" href="#contact">Schedule a Free Consultation</a>
+    </div>
+    <div class="hero-card">
+      <h3>Why families choose us</h3>
+      <ul>
+        <li>Caregivers who treat you like family</li>
+        <li>Flexible scheduling — a few hours or full-time</li>
+        <li>Trusted, background-checked, insured</li>
+        <li>Serving our local community for years</li>
+      </ul>
+      <a class="btn" href="#services">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="art" aria-hidden="true">🏡</div>
+    <div>
+      <p class="kicker" style="color:var(--gold);font-family:'Trebuchet MS',sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;font-weight:700">Our Story</p>
+      <h2 style="font-size:2rem;color:var(--teal-dark);margin:8px 0 14px">A family business built on love and trust</h2>
+      <p>Elder Home Services is a family-owned business founded on a simple belief: seniors deserve to age with dignity, in the comfort of their own homes. What began as caring for our own grandmother has grown into a service our neighbors trust with their loved ones.</p>
+      <ul>
+        <li>Family-owned and operated</li>
+        <li>Personalized care plans for every client</li>
+        <li>Consistent caregivers you'll know by name</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-intro">
+      <p class="kicker">What We Do</p>
+      <h2>Our Services</h2>
+      <p>Whatever your loved one needs to stay happy and safe at home, we're here to help.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card"><div class="icon">🧑‍⚕️</div><h3>Personal Care</h3><p>Respectful assistance with bathing, dressing, grooming, and daily routines.</p></div>
+      <div class="card"><div class="icon">🫂</div><h3>Companionship</h3><p>Friendly conversation, shared activities, games, and walks — because loneliness matters.</p></div>
+      <div class="card"><div class="icon">🧹</div><h3>Light Housekeeping</h3><p>Tidying, laundry, dishes, and keeping the home safe and clutter-free.</p></div>
+      <div class="card"><div class="icon">🥘</div><h3>Meal Preparation</h3><p>Healthy, home-cooked meals prepared to dietary needs and preferences.</p></div>
+      <div class="card"><div class="icon">🚗</div><h3>Transportation &amp; Errands</h3><p>Rides to appointments, grocery shopping, and picking up prescriptions.</p></div>
+      <div class="card"><div class="icon">⏳</div><h3>Respite Care</h3><p>Giving family caregivers a well-deserved rest with dependable coverage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" id="testimonials">
+  <div class="container">
+    <div class="sec-intro">
+      <p class="kicker">Kind Words</p>
+      <h2>What Families Say</h2>
+    </div>
+    <div class="card-grid">
+      <blockquote>"They've been a blessing to our whole family. Mom's caregiver isn't just help — she's a friend."<span class="who">— Daughter of a client</span></blockquote>
+      <blockquote>"Dependable, kind, and always on time. I don't know what we'd do without them."<span class="who">— Family caregiver</span></blockquote>
+      <blockquote>"Dad looks forward to their visits every week. It gives me real peace of mind."<span class="who">— Son of a client</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-intro">
+      <p class="kicker">Get In Touch</p>
+      <h2>Let's Talk About Your Loved One</h2>
+      <p>Reach out for a free, no-pressure consultation. We're happy to answer any questions.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-details">
+        <p class="big"><a href="tel:+15413661129" style="text-decoration:none;color:inherit">📞 (541) 366-1129</a></p>
+        <p class="big">✉️ hello@elderhomeservices.com</p>
+        <p>📍 Serving the greater local area<br>Mon–Sat, 8am – 6pm</p>
+        <p style="color:var(--muted)">Prefer a call back? Fill out the form and we'll reach out within one business day.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=font-size:1.2rem;color:var(--teal-dark)><strong>Thank you!</strong> Your message has been sent. We will be in touch shortly.</p>';">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" required>
+        <label for="phone">Phone or Email</label>
+        <input id="phone" name="phone" type="text" required>
+        <label for="msg">How Can We Help?</label>
+        <textarea id="msg" name="message" rows="5" required></textarea>
+        <p class="form-note">This demo form does not send email yet — connect it to a service like Formspree to go live.</p>
+        <br>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>♥ Elder Home Services — Caring for your family, like our own.</p>
+    <p style="font-size:.9rem;margin-top:8px">&copy; <span id="year"></span> Elder Home Services. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
